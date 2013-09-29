@@ -4,7 +4,8 @@ from line_arrangement import LineArrangement
 from center_arrangement import CenterArrangement
 
 
-LIVE = chr(169)
+#LIVE = chr(169)
+LIVE = "©"
 DEAD = " "
 
 

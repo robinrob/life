@@ -1,20 +1,26 @@
 from cell_arrangement import CellArrangement
-from center_arrangement import CenterArrangement
 
 class LineArrangement(CellArrangement):
 
     def __init__(self, size):
-        self.size = size
+        super().__init__()
 
 
-    def arrange(self, width, height):
+    def __init__(self, size, vertical=False):
+        self.cells = self.arrange_relative(size, vertical)
+
+
+    def arrange_relative(self, size, vertical=False):
         cells = []
-        sign = 1
 
-        for i in range(self.size):
+        for i in range(size + 1):
+            pos = int(i/2)
             if (i % 2):
-                cells.append((int(i / 2), 0))
-            else:
-                cells.append((int(- i / 2), 0))
+                pos *= -1
 
-        return CenterArrangement(cells).arrange(width, height)
+            x = 0 if vertical else pos
+            y = pos if vertical else 0
+
+            cells.append((x, y))
+
+        return cells

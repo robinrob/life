@@ -9,7 +9,7 @@ PYTHONBREW_DIR = "~/.pythonbrew"
 
 SRC_DIR = './'
 
-PYTHON3_VER = '3.2'
+PYTHON_VER = '3.2'
 
 @task
 def install():
@@ -45,3 +45,13 @@ def run(args):
 def count():
     clean()
     subprocess.call("find . -name '*.py' | xargs wc -l", shell=True)
+
+
+@task
+def commit():
+    subprocess.call("git add *.py", shell=True)
+    subprocess.call("git add -u *.py", shell=True)
+    subprocess.call("git add README.md", shell=True)
+    subprocess.call("git add requirements.txt", shell=True)
+    subprocess.call("git commit -m 'Auto-update.'", shell=True)
+    subprocess.call("git push origin develop", shell=True)

@@ -1,16 +1,15 @@
 from cell_arrangement import CellArrangement
-from center_arrangement import CenterArrangement
 
 class GridArrangement(CellArrangement):
 
     def __init__(self, size):
-        self.size = size
+        super().__init__(size)
 
 
-    def arrange(self, width, height):
+    def arrange_relative(self, size):
         cells = []
-        for i in range(self.size):
-            for j in range(self.size):
+        for i in range(size):
+            for j in range(size):
                 cells.append((i, j))
 
-        return CenterArrangement(cells).arrange(width, height)
+        return cells

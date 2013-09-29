@@ -1,3 +1,4 @@
+import os
 import sys
 import subprocess
 import logging
@@ -8,7 +9,7 @@ PYTHONBREW_DIR = "~/.pythonbrew"
 
 SRC_DIR = './'
 
-PYTHON_VER = '3.2'
+PYTHON3_VER = '3.2'
 
 @task
 def install():
@@ -19,15 +20,14 @@ def install():
 
 @task
 def install_python():
-    subprocess.call("pythonbrew install " + PYTHON_VER, shell=True)
     subprocess.call("pythonbrew install 2.7", shell=True)
-    subprocess.call("pythonbrew use " + PYTHON_VER, shell=True)
+    subprocess.call("pythonbrew install " + PYTHON_VER, shell=True)
 
 
 @task
 def install_requirements():
-    subprocess.call(PYTHONBREW_DIR + "/bin/pip3.2 install -r requirements.txt", shell=True)
-    subprocess.call("pythonbrew use 2.7", shell=True)
+    subprocess.call("pythonbrew use " + PYTHON_VER, shell=True)
+    subprocess.call("pip install -r requirements.txt", shell=True)
     
 
 @task

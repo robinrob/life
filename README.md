@@ -1,4 +1,4 @@
-# Installation
+# Installation on OS X
 
 ##Install Homebrew:
 - ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"

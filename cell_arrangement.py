@@ -2,13 +2,13 @@ import abc
 
 class CellArrangement:
 
-    def __init__(self, size):
+    def __init__(self, size, offset=0):
         __metaclass__ = abc.ABCMeta
-        self.cells = self.arrange_relative(size)
+        self.cells = self.arrange_relative(size, offset)
 
 
     @abc.abstractmethod
-    def arrange_relative(self, size):
+    def arrange_relative(self, size, offset=0):
         return
 
 

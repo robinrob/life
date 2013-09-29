@@ -3,7 +3,6 @@
 ##Install Homebrew:
 - ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-
 ##Install Python2.7:
 This is necessary purely to run the Fabric tool as it has not been ported to Python3 yet!
 

@@ -39,3 +39,9 @@ def clean():
 @task(args='')
 def run(args):
     subprocess.call("pythonbrew py -p " + PYTHON_VER + " life.py " + args, shell=True)
+
+
+@task
+def count():
+    clean()
+    subprocess.call("find . -name '*.py' | xargs wc -l", shell=True)

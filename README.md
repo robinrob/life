@@ -1,3 +1,9 @@
+#Life
+This is an implementation of Conway's Game of Life: http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+
+The application runs in the terminal and is configurable by the user (see below for instructions).
+
+
 # Installation on OS X
 
 ##Install Homebrew:

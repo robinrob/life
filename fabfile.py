@@ -50,7 +50,7 @@ def count():
 @task
 def commit():
     subprocess.call("git add *.py", shell=True)
-    subprocess.call("git add -u *.py", shell=True)
+    subprocess.call("git add -u", shell=True)
     subprocess.call("git add README.md", shell=True)
     subprocess.call("git add requirements.txt", shell=True)
     subprocess.call("git commit -m 'Auto-update.'", shell=True)

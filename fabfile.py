@@ -36,7 +36,7 @@ def clean():
     subprocess.call("find . -name '*~' -delete", shell=True)
 
 
-@task(args='')
+@task(args="")
 def run(args):
     subprocess.call("pythonbrew py -p " + PYTHON_VER + " life.py " + args, shell=True)
 
@@ -47,11 +47,11 @@ def count():
     subprocess.call("find . -name '*.py' | xargs wc -l", shell=True)
 
 
-@task
-def commit():
+@task(message="")
+def commit(message):
     subprocess.call("git add *.py", shell=True)
     subprocess.call("git add -u", shell=True)
     subprocess.call("git add README.md", shell=True)
     subprocess.call("git add requirements.txt", shell=True)
-    subprocess.call("git commit -m 'Auto-update.'", shell=True)
+    subprocess.call("git commit -m '" + message + "'", shell=True)
     subprocess.call("git push origin develop", shell=True)

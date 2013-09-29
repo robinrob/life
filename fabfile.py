@@ -34,7 +34,7 @@ def install_requirements():
 def clean():
     subprocess.call("find . -name '*.pyc' -delete", shell=True)
     subprocess.call("find . -name '*~' -delete", shell=True)
-    subprocess.call("find . -name '*/**__pycache__' -delete", shell=True)
+    subprocess.call("find . -name '__pycache__' -delete", shell=True)
 
 
 @task(args="")

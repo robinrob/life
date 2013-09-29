@@ -40,7 +40,7 @@ Instructions from: http://www.howopensource.com/2011/05/how-to-install-and-manag
 
 						
 ##Build the Life project:
-fab install
+- fab install
 
 
 # Running Life

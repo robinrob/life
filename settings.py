@@ -34,6 +34,7 @@ DEAD = " "
 
 #STARTING_ARRANGEMENT = LineArrangement(5)
 
+# Configurations can be added together like this:
 arr1 = DiagonalArrangement(10, flip=False)
 arr2 = DiagonalArrangement(10, flip=True)
 arr3 = LineArrangement(10, vertical=False)

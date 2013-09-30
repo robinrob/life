@@ -20,6 +20,7 @@ This is necessary purely to run the Fabric tool as it has not been ported to Pyt
 ##Install Pythonbrew:
 - sudo easy_install pythonbrew 
 - pythonbrew_install
+- add this to your shell profile (.bashrc, .zshrc): source ~/.pythonbrew/etc/bashrc
 
 Instructions from: http://www.howopensource.com/2011/05/how-to-install-and-manage-different-versions-of-python-in-linux/
 						

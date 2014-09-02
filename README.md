@@ -15,7 +15,7 @@ This is necessary purely to run the Fabric tool as it has not been ported to Pyt
 - brew install python2.7
 
 ## Install Fabric:
-- pip-2.7 install fabric
+- pip install fabric
 
 ##Install Pythonbrew:
 - sudo easy_install pythonbrew 
